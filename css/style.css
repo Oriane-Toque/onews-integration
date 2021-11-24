@@ -11,6 +11,7 @@
 }
 
 section#presentation_latest{
+    position: fixed;
     background-image: url(../images/nicole.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,6 +32,9 @@ header{
 section#latest_news{
     display: flex;
     flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 main{
@@ -148,4 +152,38 @@ div.previsualisation_article time{
 div.previsualisation_article a{
     font-weight: bold;
     text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+    
+    #container {
+        display: block;
+    }
+
+    section#presentation_latest {
+        position: static;
+        width: 100%;
+    }
+
+    section#presentation_latest ul {
+        display: block;
+        margin-left: -1.25rem;
+    }
+
+    section#presentation_latest ul a {
+        padding: 0;
+    }
+
+    section#latest_news {
+        width: 100%;
+        position: static;
+    }
+
+    main {
+        display: block;
+    }
+
+    article {
+        width: 100%;
+    }
 }
